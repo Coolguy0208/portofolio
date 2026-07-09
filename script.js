@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll('.timeline-item');
 
     const options = {
-        threshold: 0.3, // Déclenche l'animation quand 30% du bloc est visible
+        threshold: 0.3,
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Arrête de surveiller une fois animé
+                observer.unobserve(entry.target);
             }
         });
     }, options);
