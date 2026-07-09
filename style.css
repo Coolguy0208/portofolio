@@ -14,12 +14,14 @@ body {
 header {
     text-align: center;
     padding: 100px 20px;
+}
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #38bdf8;
 }
+
 .sous-texte {
     display: block;
     font-size: 0.8rem;
@@ -28,14 +30,12 @@ header h1 {
     font-style: italic;
 }
 
-
 .timeline-container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
 }
-
 
 .timeline-line {
     position: absolute;
@@ -47,7 +47,6 @@ header h1 {
     transform: translateX(-50%);
 }
 
-
 .timeline-item {
     padding: 20px 40px;
     position: relative;
@@ -57,12 +56,10 @@ header h1 {
     transition: all 0.6s ease-out;
 }
 
-
 .timeline-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .timeline-item.left {
     left: 0;
@@ -71,7 +68,6 @@ header h1 {
 .timeline-item.right {
     left: 50%;
 }
-
 
 .timeline-content {
     padding: 20px;
@@ -85,7 +81,6 @@ header h1 {
     color: #38bdf8;
     margin-bottom: 10px;
 }
-
 
 @media screen and (max-width: 768px) {
     .timeline-line {
