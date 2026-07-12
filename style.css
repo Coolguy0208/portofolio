@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
 .top-nav {
     display: flex;
     justify-content: center;
@@ -31,29 +44,6 @@
     background-color: #38bdf8;
     color: #0f172a;
     border-color: #f8fafc;
-}
-
-@media screen and (max-width: 600px) {
-    .top-nav {
-        gap: 5px;
-        padding: 10px;
-    }
-    .nav-item {
-        padding: 8px 15px;
-        font-size: 0.75rem;
-    }
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #0f172a;
-    color: #f8fafc;
-    overflow-x: hidden;
 }
 
 header {
@@ -127,21 +117,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .timeline-line {
-        left: 31px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item.right {
-        left: 0;
-    }
-}
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -197,4 +172,105 @@ header h1 {
     color: #94a3b8;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+.vulnerabilities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 60px 20px;
+}
+
+.flaw-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.flaw-table th {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 18px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #334155;
+}
+
+.flaw-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.flaw-table tr:last-child td {
+    border-bottom: none;
+}
+
+.flaw-table tr:hover {
+    background-color: #24324d;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-critical {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: 1px solid #ef4444;
+}
+
+.badge-patched {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid #10b981;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-line {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .flaw-table th, .flaw-table td {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav {
+        gap: 5px;
+        padding: 10px;
+    }
+    .nav-item {
+        padding: 8px 15px;
+        font-size: 0.75rem;
+    }
+    .vulnerabilities-container {
+        overflow-x: auto;
+    }
+    .flaw-table {
+        min-width: 600px;
+    }
 }
